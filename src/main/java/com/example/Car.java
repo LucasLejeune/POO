@@ -6,7 +6,7 @@ public class Car {
     private String motorisation;
     private int nombreSieges = 4;
     private String couleur;
-    private String boiteVitesses = "BMW";
+    private String boiteVitesses = "BVM";
     private int tailleJantes = 15;
     private ArrayList<CarOptions> options;
 

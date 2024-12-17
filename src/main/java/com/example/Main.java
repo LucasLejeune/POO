@@ -1,33 +1,17 @@
 package com.example;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Holding holding = new Holding();
-        Restaurant pizzaYolo = new Restaurant();
-        pizzaYolo.setAdresse("12 rue ici 59595 La");
-        pizzaYolo.setStatusJuridique("SARL");
-        pizzaYolo.setChiffreAffaires(20);
-        pizzaYolo.setNombreSalaries(4);
-        Pizza marguerita = new Pizza();
-        marguerita.setName("Marguerita");
-        marguerita.setPoids(230.5);
-        marguerita.addIngredient("Tomate");
-        marguerita.addIngredient("Mozzarella");
-        marguerita.addIngredient("Origan");
-        pizzaYolo.addPizza(marguerita);
-        Pizza fromages = new Pizza();
-        fromages.setName("99 fromages");
-        fromages.setPoids(99.99);
-        fromages.addIngredient("Fromage x 99");
-        pizzaYolo.addPizza(fromages);
-        Pizza gencives = new Pizza();
-        gencives.setName("Gencives de porc et fromage Corse");
-        gencives.setPoids(130);
-        gencives.addIngredient("Gencives de porc");
-        gencives.addIngredient("Fromage Corse");
-        pizzaYolo.addPizza(gencives);
-
-        holding.addRestaurant(pizzaYolo);
+        ArrayList<CarOptions> options = new ArrayList<>();
+        options.add(CarOptions.GPS);
+        options.add(CarOptions.ToitOuvrant);
+        Car car = new Car("2").avecCouleur("rouge").avecOptions(options);
+        System.out.println(car.getMotorisation());
+        System.out.println(car.getCouleur());
+        System.out.println(car.getBoiteVitesses());
+        System.out.println(car.getOptions());
 
     }
 }

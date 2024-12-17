@@ -5,13 +5,21 @@ import java.util.ArrayList;
 public class Car {
     private String motorisation;
     private int nombreSieges = 4;
-    private String couleur;
+    private String couleurInterieure;
+    private String couleurExterieure;
     private String boiteVitesses = "BVM";
     private int tailleJantes = 15;
     private ArrayList<CarOptions> options;
 
     public Car(String motorisation) {
         this.motorisation = motorisation;
+        if (this.motorisation == "DIESEL") {
+            this.couleurInterieure = "NOIR";
+            this.couleurExterieure = "NOIR";
+        } else {
+            this.tailleJantes = 16;
+            this.boiteVitesses = "BVA";
+        }
     }
 
     public Car avecNombreSieges(int nombreSieges) {
@@ -19,8 +27,13 @@ public class Car {
         return this;
     }
 
-    public Car avecCouleur(String couleur) {
-        this.couleur = couleur;
+    public Car avecCouleurInterieure(String couleur) {
+        this.couleurInterieure = couleur;
+        return this;
+    }
+
+    public Car avecCouleurExterieure(String couleur) {
+        this.couleurExterieure = couleur;
         return this;
     }
 
@@ -47,8 +60,12 @@ public class Car {
         return this.nombreSieges;
     }
 
-    public String getCouleur() {
-        return this.couleur;
+    public String getCouleurInterieure() {
+        return this.couleurInterieure;
+    }
+
+    public String getCouleurExterieure() {
+        return this.couleurExterieure;
     }
 
     public String getBoiteVitesses() {

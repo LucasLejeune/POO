@@ -11,7 +11,11 @@ public class Main {
         System.out.println(car.getMotorisation());
         System.out.println(car.getCouleur());
         System.out.println(car.getBoiteVitesses());
-        System.out.println(car.getOptions());
+        System.out.println("Options:");
+        for (CarOptions carOption : car.getOptions()) {
+            System.out.println(carOption.getLabel());
+
+        }
 
     }
 }

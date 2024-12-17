@@ -3,8 +3,8 @@ package com.example;
 public enum CarOptions {
     GPS, TunerFMDAB, ToitOuvrant;
 
-    public String getLabel(CarOptions option) {
-        switch (option) {
+    public String getLabel() {
+        switch (this) {
             case GPS:
                 return "GPS";
             case TunerFMDAB:
@@ -12,7 +12,7 @@ public enum CarOptions {
             case ToitOuvrant:
                 return "Toit ouvrant";
             default:
-                return "" + option;
+                return "" + this;
         }
     }
 }

@@ -1,4 +1,4 @@
-package main.java.com.example;
+package com.example;
 
 public class Troll extends Personnage {
     public Troll() {

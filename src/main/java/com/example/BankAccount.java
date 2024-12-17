@@ -1,10 +1,5 @@
-package main.java.com.example;
+package com.example;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class BankAccount {
 
 }

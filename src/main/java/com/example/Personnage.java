@@ -1,7 +1,4 @@
-package main.java.com.example;
-
-import lombok.Getter;
-import lombok.Setter;
+package com.example;
 
 public abstract class Personnage {
     private String name;

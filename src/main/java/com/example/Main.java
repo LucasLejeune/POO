@@ -1,9 +1,5 @@
 package com.example;
 
-import main.java.com.example.Holding;
-import main.java.com.example.Pizza;
-import main.java.com.example.Restaurant;
-
 public class Main {
     public static void main(String[] args) {
         Holding holding = new Holding();

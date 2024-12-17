@@ -4,52 +4,21 @@ import java.util.ArrayList;
 
 public class Car {
     private String motorisation;
-    private int nombreSieges = 4;
+    private int nombreSieges;
     private String couleurInterieure;
     private String couleurExterieure;
-    private String boiteVitesses = "BVM";
-    private int tailleJantes = 15;
+    private String boiteVitesses;
+    private int tailleJantes;
     private ArrayList<CarOptions> options;
 
-    public Car(String motorisation) {
-        this.motorisation = motorisation;
-        if (this.motorisation == "DIESEL") {
-            this.couleurInterieure = "NOIR";
-            this.couleurExterieure = "NOIR";
-        } else {
-            this.tailleJantes = 16;
-            this.boiteVitesses = "BVA";
-        }
-    }
-
-    public Car avecNombreSieges(int nombreSieges) {
-        this.nombreSieges = nombreSieges;
-        return this;
-    }
-
-    public Car avecCouleurInterieure(String couleur) {
-        this.couleurInterieure = couleur;
-        return this;
-    }
-
-    public Car avecCouleurExterieure(String couleur) {
-        this.couleurExterieure = couleur;
-        return this;
-    }
-
-    public Car avecBoiteVitesses(String boiteVitesses) {
-        this.boiteVitesses = boiteVitesses;
-        return this;
-    }
-
-    public Car avecTailleJantes(int tailleJantes) {
-        this.tailleJantes = tailleJantes;
-        return this;
-    }
-
-    public Car avecOptions(ArrayList<CarOptions> options) {
-        this.options = options;
-        return this;
+    public Car(CarBuilder carBuilder) {
+        this.boiteVitesses = carBuilder.getBoiteVitesses();
+        this.couleurExterieure = carBuilder.getCouleurExterieure();
+        this.couleurInterieure = carBuilder.getCouleurInterieure();
+        this.motorisation = carBuilder.getMotorisation();
+        this.nombreSieges = carBuilder.getNombreSieges();
+        this.options = carBuilder.getOptions();
+        this.tailleJantes = carBuilder.getTailleJantes();
     }
 
     public String getMotorisation() {
